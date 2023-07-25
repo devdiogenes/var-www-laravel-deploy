@@ -4,7 +4,6 @@ sudo chown -R YOUR_USER:YOUR_USER ./deploy/{.,}*
 git -C ./deploy reset --hard HEAD
 git -C ./deploy clean -f -d
 git -C ./deploy pull origin main
-php artisan migrate
 npm --prefix deploy install
 npm --prefix deploy run build
 sudo mv ./deploy/{.,}* /var/www/
