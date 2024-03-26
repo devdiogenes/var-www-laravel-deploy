@@ -7,6 +7,5 @@ git -C ./deploy clean -f -d
 git -C ./deploy pull origin main
 npm --prefix deploy install
 npm --prefix deploy run build
-php artisan migrate
 sudo mv ./deploy/{.,}* /var/www/
 rm -R deploy
